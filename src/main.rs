@@ -16,11 +16,11 @@ fn find_matches(content: &str, pattern: &str, mut writer: impl std::io::Write) {
     for line in content.lines() {
         if line.contains(pattern) {
             let result = writeln!(writer, "{}", line);
-			match result {
-				Ok(_content) => { }
-				Err(error) => { error!("Oh noes: {:?}", error); }
-			}        
-		}
+            match result {
+                Ok(_content) => { }
+                Err(error) => { error!("Oh noes: {:?}", error); }
+            }
+        }
     }
 }
 
@@ -40,7 +40,7 @@ fn main() -> Result<()> {
 
 #[test]
 fn check_answer_validity() {
-    assert_eq!(42, 42);
+    assert_eq!(6 * 7, 42);
 }
 
 #[test]
